@@ -54,3 +54,23 @@ V5 UPDATE
 - Added live email links to info@dicumed.co.uk for general enquiries, quotations and product/sample enquiries.
 - Quote checkout now prepares an email addressed to info@dicumed.co.uk.
 - Added a more premium homepage feature section and stronger visual hierarchy.
+
+V6 UPDATE
+- Homepage Products section expanded from blood tubes to a complete phlebotomy / IV station range.
+- Added categories for:
+  Blood Collection Tubes
+  Needles & Safety Sets
+  Holders & Adapters
+  Tourniquets
+  Skin Preparation
+  Cotton, Swabs & Dressings
+  Gloves & PPE
+  Specimen Handling
+  IV Cannulas
+  IV Infusion & Extension Sets
+  Syringes & Flush Accessories
+  IV Dressings & Securement
+- Added original category illustrations for all new product families.
+- Existing verified catalogue remains available for current blood collection products.
+- New categories without approved supplier/SKU data are clearly labelled Enquire or Planned.
+- Added a direct Complete Station Quote enquiry route to info@dicumed.co.uk.
