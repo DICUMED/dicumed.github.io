@@ -142,3 +142,13 @@
 .homeCard{min-height:205px}
 .homeCardText p{max-width:180px}
 .benefitStrip .wrap{box-shadow:0 5px 16px rgba(8,43,87,.03)}
+
+.footerNote{
+  margin-top:10px;
+  padding-top:10px;
+  border-top:1px solid rgba(255,255,255,.08);
+  color:#8ea4ba;
+  font-size:.68rem;
+  line-height:1.45;
+  text-align:center;
+}
