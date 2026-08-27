@@ -89,3 +89,10 @@ V8 IMAGE REPAIR
 - Removed SVG files entirely.
 - This avoids SVG/XML/MIME rendering problems on GitHub Pages.
 - Upload the ENTIRE contents of this ZIP, including assets/images.
+
+V9 HOMEPAGE REDESIGN
+- Homepage hero redesigned with stronger commercial emphasis.
+- Added premium product mosaic on the hero right-hand side.
+- Added Shop by Station split for Phlebotomy Station and IV Access Station.
+- Added Featured Categories section with more realistic commercial presentation.
+- Core functionality (catalogue, basket, quote checkout, contact links) retained.
