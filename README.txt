@@ -1,30 +1,32 @@
-DICUMED V6.1 — COMPLETE REPLACEMENT PACKAGE
+DICUMED V7.2 FINAL
 
-This corrected package contains:
-- index.html
-- catalogue.html
-- category.html
-- product.html
-- checkout.html
-- logo.png
-- assets/
-  - style.css
-  - app.js
-  - products.js
-  - catalogue.js
-  - images/
+This package implements the approved final direction:
 
-The unnecessary dicumed.html file has been removed.
+1. Main homepage direction
+- Keeps the approved clean white/navy/blue/teal layout.
+- Uses the exact DICUMED logo file supplied by the user.
+- Keeps only one Request a Quote button in the top navigation.
+- Hero keeps Explore Products as the main CTA.
+- Bottom benefits remain in one line on large screens:
+  Trusted by UK clinics & labs / High quality Products / Quality & Compliance /
+  UK Nationwide Fast Delivery / Dedicated Support / Long-term Partnerships /
+  Business Supply.
 
-UPLOAD TO GITHUB:
-1. Open the dicumed.github.io repository.
-2. Stay on branch: main.
-3. Click Add file > Upload files.
-4. Upload the CONTENTS of this DICUMED_V6_1 folder directly into the repository root.
-5. Allow files with matching names to be replaced.
-6. Commit changes.
-7. Wait for the GitHub Pages deployment to turn green.
+2. Refined product images/cards
+- Cleaner card spacing, borders, hover treatment and hierarchy.
+- Product art remains clearly marked “Illustrative”.
+- Manufacturer product photography should replace illustrative art for stocked products when available.
 
-IMPORTANT:
-Do not upload the outer DICUMED_V6_1 folder itself.
-The live homepage must remain at /index.html.
+3. Add to Cart
+- Add to Cart buttons are present on catalogue pages.
+- Add to Cart buttons are present on category pages.
+- Add to Cart button is present on individual product pages.
+- Top navigation contains the Cart and live item count.
+- Cart prepares a quotation enquiry; no payment is taken on the current static GitHub Pages site.
+
+4. GitHub deployment
+Upload EVERYTHING INSIDE the DICUMED_V7_2_FINAL folder to the ROOT of the
+dicumed.github.io repository on branch main, replacing matching files.
+Wait for GitHub Pages deployment to turn green and reload the website.
+
+Do not upload the outer DICUMED_V7_2_FINAL folder itself.
