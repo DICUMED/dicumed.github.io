@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9fbfd"/><stop offset="1" stop-color="#eaf3fb"/></linearGradient>
+  <filter id="s"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#8ea0b4" flood-opacity=".22"/></filter>
+</defs>
+<rect width="1200" height="720" rx="42" fill="url(#bg)"/>
+<circle cx="1030" cy="120" r="160" fill="#fff" opacity=".7"/>
+<circle cx="150" cy="635" r="200" fill="#e4eef7" opacity=".8"/>
+<g filter="url(#s)">
+        <g transform="translate(280 135)">
+          <rect x="0" y="0" width="480" height="300" rx="32" fill="#fff" stroke="#d1dce6" stroke-width="5"/>
+          <path d="M45 70 L240 190 L435 70" fill="none" stroke="#16c0d0" stroke-width="18" stroke-linecap="round"/>
+          <rect x="80" y="215" width="320" height="26" rx="13" fill="#e2eaf2"/>
+        </g></g>
+<text x="600" y="590" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" font-weight="700" fill="#102844">Contact DICUMED</text>
+<text x="600" y="635" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#64798f">info@dicumed.co.uk</text>
+</svg>

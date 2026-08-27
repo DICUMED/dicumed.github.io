@@ -74,3 +74,10 @@ V6 UPDATE
 - Existing verified catalogue remains available for current blood collection products.
 - New categories without approved supplier/SKU data are clearly labelled Enquire or Planned.
 - Added a direct Complete Station Quote enquiry route to info@dicumed.co.uk.
+
+V7 REGENERATED PACKAGE
+- Entire site package rebuilt from the V6 ZIP.
+- All main homepage imagery is now local and included in the package.
+- No dependency on remote Unsplash photography for the hero, solutions or resources sections.
+- Existing DICUMED logo, catalogue, basket, quote checkout, contact links and expanded phlebotomy/IV station range retained.
+- Upload every file and folder in this ZIP to GitHub, preserving the assets folder structure.
