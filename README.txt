@@ -81,3 +81,11 @@ V7 REGENERATED PACKAGE
 - No dependency on remote Unsplash photography for the hero, solutions or resources sections.
 - Existing DICUMED logo, catalogue, basket, quote checkout, contact links and expanded phlebotomy/IV station range retained.
 - Upload every file and folder in this ZIP to GitHub, preserving the assets folder structure.
+
+V8 IMAGE REPAIR
+- Fixed malformed SVG artwork caused by unescaped ampersands.
+- Converted every website illustration to PNG.
+- Updated all HTML/CSS/JS references to PNG.
+- Removed SVG files entirely.
+- This avoids SVG/XML/MIME rendering problems on GitHub Pages.
+- Upload the ENTIRE contents of this ZIP, including assets/images.
