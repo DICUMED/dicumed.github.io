@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="syringe">
+<defs>
+  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf4ff"/><stop offset="1" stop-color="#eafbf7"/></linearGradient>
+  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#17b7c5"/></linearGradient>
+  <filter id="sh"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#12385e" flood-opacity=".14"/></filter>
+</defs>
+<rect width="1200" height="760" rx="50" fill="#f8fbff"/><g transform="translate(230 300)"><rect width="520" height="110" rx="26" fill="#fff" stroke="#b9c8d6" stroke-width="14"/><path d="M80 18v74M160 18v50M240 18v74M320 18v50M400 18v74" stroke="#d4dde6" stroke-width="8"/><rect x="-80" y="30" width="80" height="50" rx="14" fill="#dce7f1"/><path d="M520 55h210" stroke="#7d91a5" stroke-width="14"/><path d="M730 55l90-28-50 28 50 28z" fill="#7d91a5"/></g></svg>

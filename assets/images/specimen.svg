@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="specimen">
+<defs>
+  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf4ff"/><stop offset="1" stop-color="#eafbf7"/></linearGradient>
+  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#17b7c5"/></linearGradient>
+  <filter id="sh"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#12385e" flood-opacity=".14"/></filter>
+</defs>
+<rect width="1200" height="760" rx="50" fill="#f8fbff"/><g filter="url(#sh)"><path d="M300 180h600v400H300z" fill="#fff" stroke="#b8c7d6" stroke-width="12"/></g><rect x="350" y="250" width="500" height="95" rx="18" fill="#eaf4ff"/><rect x="350" y="390" width="360" height="34" rx="12" fill="#d7e3ee"/><rect x="350" y="450" width="430" height="34" rx="12" fill="#d7e3ee"/><circle cx="795" cy="390" r="55" fill="#17b7c5" opacity=".18"/><path d="M770 390h50M795 365v50" stroke="#17b7c5" stroke-width="14" stroke-linecap="round"/></svg>
