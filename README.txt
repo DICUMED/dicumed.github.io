@@ -44,3 +44,13 @@ V4.1 UPDATES
 V4.2 UPDATE
 - Customer-facing catalogue currently shows Paper label products only.
 - Transparent and unlabeled/other options remain excluded from the visible catalogue for now.
+
+V5 UPDATE
+- DICUMED is now the dominant customer-facing brand throughout the public website.
+- VACUSERA/DISERA wording removed from prominent marketing sections.
+- Manufacturer identity is retained only in the expandable technical area on product pages for traceability.
+- Product names shown publicly no longer begin with VACUSERA.
+- Added Contact navigation and a dedicated Contact DICUMED section.
+- Added live email links to info@dicumed.co.uk for general enquiries, quotations and product/sample enquiries.
+- Quote checkout now prepares an email addressed to info@dicumed.co.uk.
+- Added a more premium homepage feature section and stronger visual hierarchy.

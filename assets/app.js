@@ -21,7 +21,7 @@ function renderBasket(){
  const body=document.getElementById('basketBody'); if(!body)return;
  const refs=Object.keys(basket);
  if(!refs.length){body.innerHTML='<div class="empty"><i class="fa-solid fa-basket-shopping" style="font-size:1.4rem;color:#7d92a6;margin-bottom:8px"></i><div>Your basket is empty.</div><div style="font-size:.86rem;margin-top:6px">Add products from the catalogue, then request a quote.</div></div>';return}
- body.innerHTML=refs.map(ref=>{const p=PRODUCT_MAP[ref];return `<div class="basketItem"><h4>${p.name}</h4><div class="muted">Ref: <strong>${p.ref}</strong> · ${p.category}</div><div class="muted">Pack/Carton: ${p.pack}</div><div class="qtyRow"><div class="qtyCtrls"><button onclick="changeQty('${p.ref}',-1)">−</button><strong>${basket[ref]}</strong><button onclick="changeQty('${p.ref}',1)">+</button></div><button class="btn outline small" onclick="removeFromBasket('${p.ref}')">Remove</button></div></div>`}).join('')
+ body.innerHTML=refs.map(ref=>{const p=PRODUCT_MAP[ref];return `<div class="basketItem"><h4>${p.publicName || p.publicName || p.name}</h4><div class="muted">Ref: <strong>${p.ref}</strong> · ${p.category}</div><div class="muted">Pack/Carton: ${p.pack}</div><div class="qtyRow"><div class="qtyCtrls"><button onclick="changeQty('${p.ref}',-1)">−</button><strong>${basket[ref]}</strong><button onclick="changeQty('${p.ref}',1)">+</button></div><button class="btn outline small" onclick="removeFromBasket('${p.ref}')">Remove</button></div></div>`}).join('')
 }
 function goCheckout(){if(!basketCount()){openCart();return}location.href='checkout.html'}
 function toggleMenu(){
@@ -31,5 +31,5 @@ function toggleMenu(){
 }
 window.addEventListener('resize',()=>{const nav=document.getElementById('desktopNav');if(nav&&innerWidth>980){nav.removeAttribute('style');nav.dataset.open='0'}});
 function mailQuote(subject,body){location.href=`mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
-function basketLines(){return Object.keys(basket).map(ref=>`${basket[ref]} x ${PRODUCT_MAP[ref].name} (Ref ${ref})`).join('\n')}
+function basketLines(){return Object.keys(basket).map(ref=>`${basket[ref]} x ${PRODUCT_MAP[ref].publicName || PRODUCT_MAP[ref].name} (Ref ${ref})`).join('\n')}
 document.addEventListener('DOMContentLoaded',()=>{updateCartBadge();renderBasket()});
