@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="phleb-essentials">
-<defs>
-  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf4ff"/><stop offset="1" stop-color="#eafbf7"/></linearGradient>
-  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#17b7c5"/></linearGradient>
-  <filter id="sh"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#12385e" flood-opacity=".14"/></filter>
-</defs>
-<rect width="1200" height="760" rx="50" fill="#fffaf2"/><g transform="translate(220 170)"><path d="M0 270 C80 60 340 40 430 270" fill="none" stroke="#0f9f8f" stroke-width="38" stroke-linecap="round"/><rect x="500" y="80" width="260" height="200" rx="35" fill="#fff" stroke="#d5c6af" stroke-width="12"/><circle cx="630" cy="180" r="50" fill="#ffb648" opacity=".2"/><path d="M605 180h50M630 155v50" stroke="#d67a00" stroke-width="14" stroke-linecap="round"/><rect x="430" y="370" width="300" height="120" rx="48" fill="#f2d2a8"/><rect x="535" y="386" width="90" height="88" rx="22" fill="#fff0d8"/></g></svg>

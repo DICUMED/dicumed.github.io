@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="tourniquet">
-<defs>
-  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf4ff"/><stop offset="1" stop-color="#eafbf7"/></linearGradient>
-  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#17b7c5"/></linearGradient>
-  <filter id="sh"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#12385e" flood-opacity=".14"/></filter>
-</defs>
-<rect width="1200" height="760" rx="50" fill="#eefbf7"/><path d="M250 450 C360 170 780 150 930 430" fill="none" stroke="#0f9f8f" stroke-width="70" stroke-linecap="round"/><rect x="555" y="225" width="170" height="90" rx="28" fill="#fff" stroke="#0b766c" stroke-width="14"/></svg>
