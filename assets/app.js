@@ -4,6 +4,10 @@ const PRODUCT_MAP = Object.fromEntries(PRODUCTS.map(p => [p.ref, p]));
 const CAT_COLORS = {"Serum":"#d84f4f","Serum Gel":"#d7ae2f","Thrombin":"#df9c39","EDTA":"#8d5ab7","Heparin":"#4da36a","Trace Element":"#587a98","ACD":"#b66e82","Mini":"#e0b733","Needles":"#4d8bd1","Butterfly":"#28a6a6"};
 let basket = JSON.parse(localStorage.getItem('dicumedBasket') || '{}');
 
+
+function slugForCategory(cat){return ({'Serum':'serum','Serum Gel':'serum-gel','Thrombin':'serum-gel','EDTA':'edta','Heparin':'heparin','Trace Element':'trace-element','ACD':'acd','Mini':'mini','Needles':'needles','Butterfly':'butterfly'})[cat]||'serum'}
+function imageForProduct(p){return `assets/images/${slugForCategory(p.category)}.svg`}
+
 function basketCount(){return Object.values(basket).reduce((a,b)=>a+b,0)}
 function saveBasket(){localStorage.setItem('dicumedBasket',JSON.stringify(basket));updateCartBadge();renderBasket()}
 function updateCartBadge(){document.querySelectorAll('.cartCount').forEach(el=>el.textContent=basketCount())}

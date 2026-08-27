@@ -34,3 +34,13 @@ IMPORTANT
 
 UPLOAD
 Upload ALL files and the assets folder to the root of dicumed.github.io, preserving the folder structure.
+
+
+V4.1 UPDATES
+- Footer changed to a light clinical background so the DICUMED logo is clearly visible
+- Product/category visuals updated to cleaner client-friendly tube illustrations inspired by the preferred uploaded style
+- Catalogue and category cards now use illustration thumbnails instead of plain vial placeholders
+
+V4.2 UPDATE
+- Customer-facing catalogue currently shows Paper label products only.
+- Transparent and unlabeled/other options remain excluded from the visible catalogue for now.
