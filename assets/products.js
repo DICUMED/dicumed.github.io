@@ -1,0 +1,25 @@
+window.DICUMED_PRODUCTS=[
+{id:'tube-sst',name:'Serum Separator (SST) Blood Collection Tubes',category:'Blood Collection Tubes',cat:'blood-collection',desc:'Routine serum collection format for professional laboratory workflows.',img:'assets/images/tubes.svg',note:'Illustrative product image — manufacturer photography to be added.'},
+{id:'tube-edta',name:'EDTA Blood Collection Tubes',category:'Blood Collection Tubes',cat:'blood-collection',desc:'Common haematology collection format, available subject to specification.',img:'assets/images/tubes-edta.svg',note:'Illustrative product image — manufacturer photography to be added.'},
+{id:'tube-trace',name:'Trace Element Blood Collection Tubes',category:'Blood Collection Tubes',cat:'blood-collection',desc:'Specialist tube category for trace-element workflows and laboratory requirements.',img:'assets/images/tubes-trace.svg',note:'Illustrative product image — manufacturer photography to be added.'},
+{id:'needle',name:'Blood Collection Needles & Holders',category:'Venepuncture',cat:'venepuncture',desc:'Professional venepuncture needles, holders and compatible collection accessories.',img:'assets/images/needles.svg',note:'Illustrative product image — manufacturer photography to be added.'},
+{id:'butterfly',name:'Safety Blood Collection Sets',category:'Venepuncture',cat:'venepuncture',desc:'Butterfly-style safety sets for routine blood collection environments.',img:'assets/images/butterfly.svg',note:'Illustrative product image — manufacturer photography to be added.'},
+{id:'tourniquet',name:'Tourniquets',category:'Phlebotomy Essentials',cat:'phlebotomy-essentials',desc:'Reusable and single-use tourniquet options for phlebotomy stations.',img:'assets/images/tourniquet.svg',note:'Illustrative product image — manufacturer photography to be added.'},
+{id:'wipes',name:'Alcohol Wipes & Swabs',category:'Phlebotomy Essentials',cat:'phlebotomy-essentials',desc:'Skin preparation consumables for routine venepuncture workflows.',img:'assets/images/wipes.svg',note:'Illustrative product image — manufacturer photography to be added.'},
+{id:'cotton',name:'Cotton Wool & Dressings',category:'Phlebotomy Essentials',cat:'phlebotomy-essentials',desc:'Post-venepuncture support consumables including cotton wool, plasters and dressings.',img:'assets/images/dressing.svg',note:'Illustrative product image — manufacturer photography to be added.'},
+{id:'gloves',name:'Examination Gloves',category:'PPE & Hygiene',cat:'ppe-hygiene',desc:'Routine disposable examination glove categories for clinical stations.',img:'assets/images/gloves.svg',note:'Illustrative product image — manufacturer photography to be added.'},
+{id:'bags',name:'Specimen Bags',category:'Specimen Handling',cat:'specimen-handling',desc:'Practical specimen transport and handling accessories for laboratory workflows.',img:'assets/images/specimen.svg',note:'Illustrative product image — manufacturer photography to be added.'},
+{id:'cannula',name:'IV Cannulas',category:'IV Access',cat:'iv-access',desc:'IV access cannula category for professional clinical supply enquiries.',img:'assets/images/iv.svg',note:'Illustrative product image — manufacturer photography to be added.'},
+{id:'extension',name:'Extension Sets & IV Accessories',category:'IV Access',cat:'iv-access',desc:'Extension and supporting IV-access consumables for complete station supply.',img:'assets/images/extension.svg',note:'Illustrative product image — manufacturer photography to be added.'},
+{id:'syringe',name:'Syringes',category:'IV Access',cat:'iv-access',desc:'General syringe categories for professional healthcare environments.',img:'assets/images/syringe.svg',note:'Illustrative product image — manufacturer photography to be added.'},
+{id:'secure',name:'IV Dressings & Securement',category:'IV Access',cat:'iv-access',desc:'Securement and dressing categories supporting IV access workflows.',img:'assets/images/securement.svg',note:'Illustrative product image — manufacturer photography to be added.'}
+];
+
+window.DICUMED_CATEGORIES=[
+{slug:'blood-collection',name:'Blood Collection',desc:'Blood collection tubes and accessories for routine and specialist workflows.',photo:'assets/images/phlebotomy-main.jpg'},
+{slug:'venepuncture',name:'Needles & Venepuncture',desc:'Needles, holders and safety collection sets.',photo:'assets/images/phlebotomy-main.jpg'},
+{slug:'phlebotomy-essentials',name:'Phlebotomy Essentials',desc:'Tourniquets, wipes, cotton wool, dressings and supporting station supplies.',photo:'assets/images/phlebotomy-main.jpg'},
+{slug:'iv-access',name:'IV Access & Infusion',desc:'Cannulas, extension sets, syringes and securement accessories.',photo:'assets/images/iv-main.jpg'},
+{slug:'ppe-hygiene',name:'PPE & Hygiene',desc:'Gloves and routine protective consumables.',photo:'assets/images/laboratory-main.jpg'},
+{slug:'specimen-handling',name:'Specimen Handling',desc:'Specimen bags and supporting laboratory handling consumables.',photo:'assets/images/laboratory-main.jpg'}
+];
