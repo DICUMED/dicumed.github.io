@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DICUMED supplies professional blood collection, phlebotomy and laboratory consumables to healthcare organisations across the UK." />
+  <title>DICUMED | Blood Collection & Laboratory Supplies UK</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    :root{
+      --navy:#0f2742;
+      --blue:#0f6bdc;
+      --blue-dark:#0b55af;
+      --green:#1b8f6a;
+      --ink:#17263a;
+      --muted:#607086;
+      --line:#dfe6ee;
+      --soft:#f5f8fb;
+      --soft-blue:#eef5ff;
+      --white:#fff;
+      --shadow:0 16px 38px rgba(15,39,66,.10);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,Arial,sans-serif;
+      color:var(--ink);
+      background:#fff;
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%}
+    .container{width:min(1180px,92%);margin:auto}
+
+    .topbar{
+      background:var(--navy);
+      color:#dfe9f4;
+      font-size:.88rem;
+    }
+    .topbar .container{
+      min-height:36px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.97);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(10px);
+    }
+    .nav{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:var(--navy);
+      font-size:1.65rem;
+      font-weight:800;
+      letter-spacing:.04em;
+    }
+    .brand-mark{
+      width:34px;height:34px;border-radius:10px;
+      display:grid;place-items:center;
+      background:var(--blue);
+      color:#fff;
+      font-size:1rem;
+    }
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:26px;
+      font-size:.93rem;
+      font-weight:600;
+    }
+    .nav-links a:hover{color:var(--blue)}
+    .nav-actions{display:flex;gap:10px;align-items:center}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:44px;
+      padding:0 20px;
+      border-radius:999px;
+      border:1px solid transparent;
+      font-weight:700;
+      font-size:.92rem;
+      transition:.2s ease;
+      cursor:pointer;
+    }
+    .btn-primary{background:var(--blue);color:#fff}
+    .btn-primary:hover{background:var(--blue-dark);transform:translateY(-1px)}
+    .btn-outline{border-color:#b7c7d9;background:#fff;color:var(--navy)}
+    .btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+    .menu-btn{display:none;background:none;border:0;font-size:1.25rem;color:var(--navy)}
+
+    .hero{
+      background:linear-gradient(135deg,#f7fbff 0%,#eef5ff 50%,#ffffff 100%);
+      padding:72px 0 58px;
+      border-bottom:1px solid var(--line);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.12fr .88fr;
+      gap:46px;
+      align-items:center;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#e7f0ff;
+      color:#1558a6;
+      padding:7px 12px;
+      border-radius:999px;
+      font-size:.82rem;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+    h1{
+      color:var(--navy);
+      font-size:clamp(2.45rem,5vw,4.6rem);
+      line-height:1.03;
+      letter-spacing:-.045em;
+      margin-bottom:20px;
+    }
+    h1 span{color:var(--blue)}
+    .hero-copy{
+      font-size:1.08rem;
+      color:var(--muted);
+      max-width:720px;
+      margin-bottom:26px;
+    }
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-note{
+      display:flex;
+      gap:22px;
+      flex-wrap:wrap;
+      margin-top:24px;
+      color:#41566f;
+      font-size:.9rem;
+    }
+    .hero-note i{color:var(--green)}
+
+    .hero-panel{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+    .hero-panel h3{font-size:1.25rem;color:var(--navy);margin-bottom:6px}
+    .hero-panel p{color:var(--muted);font-size:.92rem}
+    .tube-row{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:12px;
+      margin:24px 0;
+      align-items:end;
+    }
+    .tube{
+      height:138px;
+      border:1px solid #cfd9e5;
+      border-radius:11px 11px 16px 16px;
+      background:linear-gradient(#fff,#edf3f8);
+      position:relative;
+      box-shadow:inset 0 -18px 25px rgba(15,39,66,.04);
+    }
+    .cap{
+      position:absolute;left:-2px;right:-2px;top:-8px;height:22px;border-radius:8px 8px 5px 5px;
+    }
+    .cap.red{background:#d84c4c}.cap.gold{background:#e6b531}.cap.purple{background:#8f61bd}.cap.blue{background:#5c88d9}.cap.green{background:#5aa46d}
+    .tube-label{
+      position:absolute;left:9px;right:9px;top:48px;background:white;border:1px solid #e0e6ec;border-radius:4px;height:44px
+    }
+    .panel-tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{
+      background:var(--soft);
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:7px 10px;
+      font-size:.78rem;
+      color:#42566f;
+      font-weight:600;
+    }
+
+    section{padding:70px 0}
+    .section-head{max-width:760px;margin-bottom:30px}
+    .section-head .kicker{color:var(--blue);font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.09em}
+    .section-head h2{font-size:clamp(1.8rem,3vw,2.65rem);line-height:1.15;color:var(--navy);margin:8px 0 10px}
+    .section-head p{color:var(--muted)}
+
+    .category-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      transition:.2s ease;
+    }
+    .card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+    .iconbox{
+      width:46px;height:46px;border-radius:14px;
+      display:grid;place-items:center;
+      background:var(--soft-blue);
+      color:var(--blue);
+      margin-bottom:16px;
+      font-size:1.15rem;
+    }
+    .card h3{font-size:1.08rem;color:var(--navy);margin-bottom:7px}
+    .card p{font-size:.9rem;color:var(--muted)}
+    .card .link{display:inline-block;margin-top:14px;color:var(--blue);font-size:.87rem;font-weight:700}
+
+    .soft{background:var(--soft)}
+    .product-groups{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .product-group{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:22px;
+    }
+    .product-group h3{color:var(--navy);font-size:1.05rem;margin-bottom:10px}
+    .product-group ul{list-style:none;display:grid;gap:7px;color:#4e6279;font-size:.9rem}
+    .product-group li:before{content:"•";color:var(--blue);font-weight:800;margin-right:8px}
+
+    .business{
+      background:linear-gradient(120deg,var(--navy),#183d64);
+      color:#fff;
+    }
+    .business .section-head h2,.business .section-head p{color:#fff}
+    .business .section-head p{opacity:.8}
+    .benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .benefit{
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.07);
+      border-radius:18px;
+      padding:20px;
+    }
+    .benefit i{font-size:1.2rem;margin-bottom:10px;color:#8fc0ff}
+    .benefit h4{font-size:.98rem;margin-bottom:4px}
+    .benefit p{font-size:.84rem;color:#d8e4ef}
+    .business-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .business .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+
+    .workflow{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
+    .step{
+      position:relative;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:22px;
+      background:#fff;
+    }
+    .step-num{
+      width:30px;height:30px;border-radius:50%;
+      background:var(--blue);color:#fff;
+      display:grid;place-items:center;
+      font-size:.8rem;font-weight:800;
+      margin-bottom:12px;
+    }
+    .step h4{color:var(--navy);margin-bottom:5px}
+    .step p{color:var(--muted);font-size:.86rem}
+
+    .trustbar{
+      padding:22px 0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      background:#fff;
+    }
+    .trustbar .container{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:15px;
+      text-align:center;
+      font-weight:700;
+      color:#40556e;
+      font-size:.86rem;
+    }
+    .trustbar i{color:var(--blue);margin-right:6px}
+
+    .resource-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .forms-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+    }
+    form{
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:24px;
+      background:#fff;
+    }
+    form h3{color:var(--navy);margin-bottom:6px}
+    form p{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+    .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+    label{font-size:.8rem;font-weight:700;color:#40556e}
+    input,textarea,select{
+      width:100%;
+      border:1px solid #cad5e1;
+      border-radius:10px;
+      padding:11px 12px;
+      font:inherit;
+      color:var(--ink);
+      background:#fff;
+    }
+    textarea{min-height:110px;resize:vertical}
+    .form-note{font-size:.76rem;color:#75879b;margin-top:10px}
+
+    .regulatory{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      align-items:start;
+    }
+    .notice{
+      border-left:4px solid var(--blue);
+      background:var(--soft-blue);
+      border-radius:12px;
+      padding:18px;
+      color:#39516d;
+      font-size:.9rem;
+    }
+    .checklist{list-style:none;display:grid;gap:10px;margin-top:18px}
+    .checklist li{display:flex;gap:9px;color:#4d6278}
+    .checklist i{color:var(--green);margin-top:4px}
+
+    footer{background:#0b1b2d;color:#c9d5e3;padding:48px 0 24px}
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.4fr repeat(3,1fr);
+      gap:30px;
+    }
+    footer h4{color:#fff;margin-bottom:12px}
+    footer ul{list-style:none;display:grid;gap:8px;font-size:.88rem}
+    footer a:hover{color:#fff}
+    .footer-copy{max-width:360px;font-size:.9rem;color:#aebfd0}
+    .footer-bottom{
+      border-top:1px solid #263b52;
+      margin-top:30px;
+      padding-top:18px;
+      display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+      font-size:.8rem;color:#94a7ba;
+    }
+
+    @media(max-width:980px){
+      .nav-links{display:none}
+      .menu-btn{display:block}
+      .hero-grid,.regulatory,.forms-wrap{grid-template-columns:1fr}
+      .category-grid{grid-template-columns:repeat(2,1fr)}
+      .product-groups,.resource-grid{grid-template-columns:repeat(2,1fr)}
+      .benefit-grid,.workflow{grid-template-columns:repeat(2,1fr)}
+      .trustbar .container{grid-template-columns:repeat(2,1fr)}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:620px){
+      .container{width:min(94%,1180px)}
+      .topbar .container{justify-content:center;text-align:center;padding:7px 0}
+      .nav-actions .btn-outline{display:none}
+      .hero{padding:50px 0 42px}
+      .category-grid,.product-groups,.resource-grid,.benefit-grid,.workflow,.field-grid,.trustbar .container,.footer-grid{grid-template-columns:1fr}
+      .hero-panel{padding:20px}
+      .tube-row{gap:7px}
+      .tube{height:115px}
+      section{padding:54px 0}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Professional medical & laboratory supplies for UK healthcare organisations</span>
+      <span><i class="fa-solid fa-truck"></i> Nationwide delivery options</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="DICUMED home">
+        <span class="brand-mark"><i class="fa-solid fa-plus"></i></span>
+        DICUMED
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#products">Products</a>
+        <a href="#phlebotomy">Phlebotomy Solutions</a>
+        <a href="#laboratory">Laboratory Solutions</a>
+        <a href="#business">Business Accounts</a>
+        <a href="#resources">Resources</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="#quote"><i class="fa-regular fa-file-lines"></i> Request Quote</a>
+        <button class="menu-btn" aria-label="Menu" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><i class="fa-solid fa-circle-check"></i> UK-focused B2B healthcare supply</div>
+          <h1>Professional Blood Collection <span>& Laboratory Solutions</span></h1>
+          <p class="hero-copy">
+            DICUMED supplies blood collection systems, phlebotomy consumables and laboratory products to healthcare organisations across the United Kingdom.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#products"><i class="fa-solid fa-box-open"></i> Explore Products</a>
+            <a class="btn btn-outline" href="#quote"><i class="fa-regular fa-file-lines"></i> Request Business Quote</a>
+          </div>
+
+          <div class="hero-note">
+            <span><i class="fa-solid fa-check"></i> Professional healthcare supply</span>
+            <span><i class="fa-solid fa-check"></i> Volume pricing</span>
+            <span><i class="fa-solid fa-check"></i> Multi-site distribution</span>
+          </div>
+        </div>
+
+        <div class="hero-panel" aria-label="Blood collection product range">
+          <h3>Core blood collection range</h3>
+          <p>Structured around routine and specialist laboratory workflows.</p>
+
+          <div class="tube-row">
+            <div class="tube"><div class="cap red"></div><div class="tube-label"></div></div>
+            <div class="tube"><div class="cap gold"></div><div class="tube-label"></div></div>
+            <div class="tube"><div class="cap purple"></div><div class="tube-label"></div></div>
+            <div class="tube"><div class="cap blue"></div><div class="tube-label"></div></div>
+            <div class="tube"><div class="cap green"></div><div class="tube-label"></div></div>
+          </div>
+
+          <div class="panel-tags">
+            <span class="tag">Serum</span>
+            <span class="tag">EDTA</span>
+            <span class="tag">Citrate</span>
+            <span class="tag">Heparin</span>
+            <span class="tag">Glucose</span>
+            <span class="tag">Trace Element</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trustbar">
+      <div class="container">
+        <span><i class="fa-solid fa-hospital"></i> Clinics & laboratories</span>
+        <span><i class="fa-solid fa-boxes-stacked"></i> Volume ordering</span>
+        <span><i class="fa-solid fa-location-dot"></i> Multi-site supply</span>
+        <span><i class="fa-solid fa-file-shield"></i> Technical documentation</span>
+        <span><i class="fa-solid fa-headset"></i> Business support</span>
+      </div>
+    </div>
+
+    <section id="products">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Product catalogue</div>
+          <h2>Shop by product category</h2>
+          <p>
+            DICUMED is being developed around a specialist range of blood collection and laboratory consumables, with VACUSERA by DISERA as an initial core product portfolio.
+          </p>
+        </div>
+
+        <div class="category-grid">
+          <article class="card">
+            <div class="iconbox"><i class="fa-solid fa-vial"></i></div>
+            <h3>Blood Collection Tubes</h3>
+            <p>Routine and specialist tubes for serum, haematology, coagulation, chemistry and other diagnostic applications.</p>
+            <a class="link" href="#tube-range">View range <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card">
+            <div class="iconbox"><i class="fa-solid fa-syringe"></i></div>
+            <h3>Blood Collection Needles</h3>
+            <p>Single-use professional blood collection needles in manufacturer-specified gauges and configurations.</p>
+            <a class="link" href="#phlebotomy">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card">
+            <div class="iconbox"><i class="fa-solid fa-shield-heart"></i></div>
+            <h3>Safety Collection Sets</h3>
+            <p>Butterfly-style safety blood collection sets, including selected holder configurations.</p>
+            <a class="link" href="#phlebotomy">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card">
+            <div class="iconbox"><i class="fa-solid fa-link"></i></div>
+            <h3>Holders & Adapters</h3>
+            <p>Tube holders, safety holders, Luer Lock holders and related collection accessories.</p>
+            <a class="link" href="#phlebotomy">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card">
+            <div class="iconbox"><i class="fa-solid fa-droplet"></i></div>
+            <h3>Mini & Capillary Collection</h3>
+            <p>Low-volume blood collection options for appropriate capillary and specialist sampling workflows.</p>
+            <a class="link" href="#tube-range">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card">
+            <div class="iconbox"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>ESR / Sedimentation</h3>
+            <p>Blood sedimentation products for laboratory ESR workflows.</p>
+            <a class="link" href="#laboratory">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card">
+            <div class="iconbox"><i class="fa-solid fa-flask"></i></div>
+            <h3>Urine Collection</h3>
+            <p>Specimen collection products and related accessories for professional diagnostic use.</p>
+            <a class="link" href="#laboratory">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="card">
+            <div class="iconbox"><i class="fa-solid fa-microscope"></i></div>
+            <h3>Hospital & Laboratory</h3>
+            <p>Additional laboratory and hospital consumables, including selected sharps and specimen products.</p>
+            <a class="link" href="#laboratory">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="tube-range">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Blood collection tubes</div>
+          <h2>Routine and specialist tube families</h2>
+          <p>
+            Final product specifications, pack sizes, reference numbers, dimensions, cap colours and regulatory information should be populated only from approved manufacturer documentation.
+          </p>
+        </div>
+
+        <div class="product-groups">
+          <div class="product-group">
+            <h3>Serum Collection</h3>
+            <ul>
+              <li>Serum Clot Activator Tubes</li>
+              <li>Serum Gel + Clot Activator Tubes</li>
+              <li>Thrombin / Rapid Serum Tubes</li>
+            </ul>
+          </div>
+
+          <div class="product-group">
+            <h3>Haematology</h3>
+            <ul>
+              <li>K2EDTA Tubes</li>
+              <li>K3EDTA Tubes</li>
+              <li>EDTA + Gel Tubes</li>
+              <li>EDTA + Aprotinin Tubes</li>
+            </ul>
+          </div>
+
+          <div class="product-group">
+            <h3>Coagulation</h3>
+            <ul>
+              <li>Sodium Citrate Tubes</li>
+              <li>CTAD Tubes</li>
+            </ul>
+          </div>
+
+          <div class="product-group">
+            <h3>Clinical Chemistry</h3>
+            <ul>
+              <li>Lithium Heparin Tubes</li>
+              <li>Sodium Heparin Tubes</li>
+              <li>Heparin + Gel Tubes</li>
+              <li>Glucose / Fluoride Tubes</li>
+            </ul>
+          </div>
+
+          <div class="product-group">
+            <h3>Specialist Tubes</h3>
+            <ul>
+              <li>Trace Element Tubes</li>
+              <li>Crossmatch Tubes</li>
+              <li>ACD-A / ACD-B Tubes</li>
+              <li>No Additive Tubes</li>
+            </ul>
+          </div>
+
+          <div class="product-group">
+            <h3>Mini / Capillary</h3>
+            <ul>
+              <li>Mini Serum Tubes</li>
+              <li>Mini EDTA Tubes</li>
+              <li>Other manufacturer-approved mini configurations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="phlebotomy">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Phlebotomy solutions</div>
+          <h2>Complete blood collection workflow</h2>
+          <p>Organised to help clinics and phlebotomy teams source routine products from a single professional supplier.</p>
+        </div>
+
+        <div class="category-grid">
+          <div class="card">
+            <div class="iconbox"><i class="fa-solid fa-vials"></i></div>
+            <h3>Routine Collection</h3>
+            <p>Serum, EDTA, citrate, heparin, glucose and specialist tubes.</p>
+          </div>
+          <div class="card">
+            <div class="iconbox"><i class="fa-solid fa-syringe"></i></div>
+            <h3>Venepuncture</h3>
+            <p>Straight needles, safety butterfly sets, holders and adapters.</p>
+          </div>
+          <div class="card">
+            <div class="iconbox"><i class="fa-solid fa-bandage"></i></div>
+            <h3>Accessories</h3>
+            <p>Reusable and disposable tourniquets, capillary collection and supporting items.</p>
+          </div>
+          <div class="card">
+            <div class="iconbox"><i class="fa-solid fa-box"></i></div>
+            <h3>Clinic Supply</h3>
+            <p>Volume ordering, repeat supply and multi-site distribution for healthcare groups.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="laboratory">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Laboratory solutions</div>
+          <h2>Products organised by diagnostic workflow</h2>
+          <p>Help procurement teams find products by intended laboratory use rather than by tube colour alone.</p>
+        </div>
+
+        <div class="resource-grid">
+          <div class="card"><h3>Clinical Chemistry</h3><p>Serum, separator and heparin-based collection options.</p></div>
+          <div class="card"><h3>Haematology</h3><p>EDTA-based whole-blood collection options.</p></div>
+          <div class="card"><h3>Coagulation</h3><p>Citrate and CTAD collection systems for applicable coagulation workflows.</p></div>
+          <div class="card"><h3>Molecular Diagnostics</h3><p>Selected specialist EDTA and gel configurations.</p></div>
+          <div class="card"><h3>Trace Element Testing</h3><p>Specialist collection tubes for applications requiring controlled contamination risk.</p></div>
+          <div class="card"><h3>Specimen Collection</h3><p>Urine collection, ESR systems and related laboratory consumables.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="business" id="business">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker" style="color:#9dc8ff">DICUMED Business</div>
+          <h2>Healthcare purchasing made simpler</h2>
+          <p>
+            DICUMED is designed to support independent clinics, laboratories and multi-site healthcare organisations with repeatable, professional B2B supply.
+          </p>
+        </div>
+
+        <div class="benefit-grid">
+          <div class="benefit"><i class="fa-solid fa-tags"></i><h4>Business Pricing</h4><p>Volume and contract pricing for eligible organisations.</p></div>
+          <div class="benefit"><i class="fa-solid fa-calendar-check"></i><h4>Scheduled Supply</h4><p>Support for planned and repeat ordering cycles.</p></div>
+          <div class="benefit"><i class="fa-solid fa-location-dot"></i><h4>Multi-Site Delivery</h4><p>Central purchasing with delivery to multiple clinic locations.</p></div>
+          <div class="benefit"><i class="fa-solid fa-headset"></i><h4>Account Support</h4><p>Commercial support for procurement and product enquiries.</p></div>
+        </div>
+
+        <div class="business-actions">
+          <a class="btn btn-primary" href="#quote">Request a Business Quote</a>
+          <a class="btn btn-outline" href="#samples">Request Samples</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Multi-site healthcare</div>
+          <h2>From one clinic to a nationwide network</h2>
+          <p>DICUMED can support a central purchasing model with coordinated supply to individual clinic locations.</p>
+        </div>
+
+        <div class="workflow">
+          <div class="step"><div class="step-num">1</div><h4>Central Purchasing</h4><p>Agree products, quantities and commercial requirements centrally.</p></div>
+          <div class="step"><div class="step-num">2</div><h4>Stock Planning</h4><p>Coordinate supply based on forecast usage and order frequency.</p></div>
+          <div class="step"><div class="step-num">3</div><h4>Clinic Distribution</h4><p>Allocate orders to individual sites where required.</p></div>
+          <div class="step"><div class="step-num">4</div><h4>Nationwide Delivery</h4><p>Support repeat deliveries to healthcare locations across the UK.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="resources">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Resources</div>
+          <h2>Technical and educational support</h2>
+          <p>Build a searchable knowledge centre for customers, procurement teams and healthcare professionals.</p>
+        </div>
+
+        <div class="resource-grid">
+          <div class="card"><div class="iconbox"><i class="fa-solid fa-list-ol"></i></div><h3>Order of Draw</h3><p>Educational guidance based on approved clinical and manufacturer information.</p></div>
+          <div class="card"><div class="iconbox"><i class="fa-solid fa-vial-circle-check"></i></div><h3>Blood Tube Guide</h3><p>Explain additives, intended applications and product differences.</p></div>
+          <div class="card"><div class="iconbox"><i class="fa-solid fa-ruler"></i></div><h3>Needle Gauge Guide</h3><p>Help professionals navigate manufacturer-specified gauge options.</p></div>
+          <div class="card"><div class="iconbox"><i class="fa-solid fa-file-pdf"></i></div><h3>Instructions for Use</h3><p>Provide approved IFUs and technical documents where available.</p></div>
+          <div class="card"><div class="iconbox"><i class="fa-solid fa-file-shield"></i></div><h3>Certificates</h3><p>Make relevant manufacturer compliance documentation available to customers.</p></div>
+          <div class="card"><div class="iconbox"><i class="fa-solid fa-book-open"></i></div><h3>Product Catalogue</h3><p>Provide catalogue access and structured product information.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container regulatory">
+        <div>
+          <div class="section-head">
+            <div class="kicker">About DICUMED</div>
+            <h2>Reliable products. Reliable supply. Reliable diagnostics.</h2>
+            <p>
+              DICUMED is a UK medical supplies business focused on professional blood collection, phlebotomy and laboratory consumables.
+            </p>
+          </div>
+
+          <ul class="checklist">
+            <li><i class="fa-solid fa-check-circle"></i><span>Specialist focus on blood collection and laboratory supply</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span>Business and volume purchasing model</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span>Scalable platform for multiple manufacturers and product families</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span>UK-focused customer support and distribution strategy</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-head">
+            <div class="kicker">Quality & regulatory</div>
+            <h2>Clear, evidence-based product information</h2>
+            <p>
+              Regulatory statements should be made only where supported by current manufacturer and UK regulatory documentation.
+            </p>
+          </div>
+
+          <div class="notice">
+            <strong>Important:</strong> This website does not claim that DICUMED is an exclusive UK distributor, UK Responsible Person, NHS approved supplier, framework supplier or MHRA-registered entity for any specific product unless and until that status is formally documented.
+          </div>
+
+          <ul class="checklist">
+            <li><i class="fa-solid fa-check-circle"></i><span>Instructions for Use</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span>Technical datasheets</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span>Declarations of conformity where applicable</span></li>
+            <li><i class="fa-solid fa-check-circle"></i><span>Product traceability and safety information</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="quote">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Commercial enquiries</div>
+          <h2>Request pricing or product samples</h2>
+          <p>These forms are ready for front-end display. Connect them later to your preferred email, CRM or e-commerce backend.</p>
+        </div>
+
+        <div class="forms-wrap">
+          <form onsubmit="submitDemo(event,'quote')">
+            <h3>Request a Business Quotation</h3>
+            <p>For clinics, laboratories, healthcare groups and procurement teams.</p>
+
+            <div class="field-grid">
+              <div class="field"><label>Organisation</label><input required type="text" placeholder="Organisation name"></div>
+              <div class="field"><label>Contact name</label><input required type="text" placeholder="Your name"></div>
+              <div class="field"><label>Email</label><input required type="email" placeholder="name@organisation.co.uk"></div>
+              <div class="field"><label>Telephone</label><input type="tel" placeholder="+44"></div>
+            </div>
+
+            <div class="field"><label>Products / quantities required</label><textarea placeholder="List products, approximate quantities, monthly or annual requirement..."></textarea></div>
+            <button class="btn btn-primary" type="submit">Request DICUMED Pricing</button>
+            <div class="form-note">Demo form only until a receiving email/CRM is connected.</div>
+          </form>
+
+          <form id="samples" onsubmit="submitDemo(event,'sample')">
+            <h3>Request Product Samples</h3>
+            <p>For professional healthcare organisations evaluating suitable products.</p>
+
+            <div class="field-grid">
+              <div class="field"><label>Organisation</label><input required type="text" placeholder="Organisation name"></div>
+              <div class="field"><label>Contact name</label><input required type="text" placeholder="Your name"></div>
+              <div class="field"><label>Professional email</label><input required type="email" placeholder="name@organisation.co.uk"></div>
+              <div class="field"><label>Number of sites</label><input type="number" min="1" placeholder="1"></div>
+            </div>
+
+            <div class="field"><label>Products requested</label><textarea placeholder="Products you would like to evaluate and approximate current usage..."></textarea></div>
+            <button class="btn btn-primary" type="submit">Request Product Samples</button>
+            <div class="form-note">Sample requests are subject to approval and availability.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="color:#fff;margin-bottom:14px">
+            <span class="brand-mark"><i class="fa-solid fa-plus"></i></span>
+            DICUMED
+          </div>
+          <p class="footer-copy">
+            Professional blood collection, phlebotomy and laboratory supplies for UK healthcare organisations.
+          </p>
+        </div>
+
+        <div>
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#tube-range">Blood Collection Tubes</a></li>
+            <li><a href="#phlebotomy">Needles & Safety Sets</a></li>
+            <li><a href="#phlebotomy">Holders & Accessories</a></li>
+            <li><a href="#laboratory">Laboratory Solutions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Business</h4>
+          <ul>
+            <li><a href="#business">Business Accounts</a></li>
+            <li><a href="#quote">Request Quote</a></li>
+            <li><a href="#samples">Request Samples</a></li>
+            <li><a href="#resources">Resources</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About DICUMED</a></li>
+            <li><a href="#about">Quality & Regulatory</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 DICUMED. All rights reserved.</span>
+        <span>United Kingdom · GBP</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      const nav = document.querySelector('.nav-links');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.top = '114px';
+      nav.style.left = '3%';
+      nav.style.right = '3%';
+      nav.style.padding = '18px';
+      nav.style.background = '#fff';
+      nav.style.border = '1px solid #dfe6ee';
+      nav.style.borderRadius = '16px';
+      nav.style.boxShadow = '0 14px 30px rgba(15,39,66,.12)';
+    }
+
+    function submitDemo(event, type){
+      event.preventDefault();
+      alert(type === 'quote'
+        ? 'Quotation form is ready. Connect this form to your business email or CRM before launch.'
+        : 'Sample request form is ready. Connect this form to your business email or CRM before launch.'
+      );
+    }
+  </script>
+</body>
+</html>
