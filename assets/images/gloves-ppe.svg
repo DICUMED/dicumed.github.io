@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
-<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fbfe"/><stop offset="1" stop-color="#edf5fb"/></linearGradient></defs>
-<rect width="900" height="600" rx="38" fill="url(#bg)"/>
-<circle cx="730" cy="110" r="135" fill="#fff" opacity=".72"/><circle cx="140" cy="520" r="160" fill="#e4eef7" opacity=".75"/>
-<path d="M380 405 C355 340,350 270,365 200 L395 200 L405 300 L420 150 L450 150 L450 295 L470 135 L500 140 L487 300 L520 170 L548 182 L520 340 C505 405,470 438,430 435 Z" fill="#5c83c4" opacity=".85"/>
-<text x="450" y="535" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#102844">Gloves & PPE</text>
-</svg>
